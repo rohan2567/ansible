@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ansible</title>
+
+	<meta name=”viewport” content=”width=device-width,  initial-scale=1, user-scalable=yes″>
+<meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
+<meta charset="UTF-8"> 
+
+</head>
+<style>
+
+	
+@viewport
+  {
+    width:extend-to-zoom;
+    zoom:1.0;
+  }
+@-ms-viewport
+  {
+     width:extend-to-zoom;
+    zoom:1.0;
+  }
+	
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    }
+    
+    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+    }
+    
+    html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;}
+    
+    .clear {clear: both;}
+    
+    p {
+        font-size: 1em;
+        line-height: 1.4em;
+        margin-bottom: 20px;
+        color: #444;
+    }
+    
+    #cv {
+        width: 90%;
+        max-width: 800px;
+        background: #f3f3f3;
+        margin: 30px auto;
+    }
+    
+    .mainDetails {
+        padding: 25px 35px;
+        border-bottom: 2px solid #cf8a05;
+        background: #ededed;
+    }
+    
+    #name h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        margin-bottom: -6px;
+    }
+    
+    #name h2 {
+        font-size: 2em;
+        margin-left: 2px;
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    }
+    
+    #mainArea {
+        padding: 0 40px;
+    }
+    
+    #headshot {
+        width: 12.5%;
+        float: left;
+        margin-right: 30px;
+    }
+    
+    #headshot img {
+        width: 100%;
+        height: auto;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+    
+    #name {
+        float: left;
+    }
+    
+    #contactDetails {
+        float: right;
+    }
+    
+    #contactDetails ul {
+        list-style-type: none;
+        font-size: 0.9em;
+        margin-top: 2px;
+    }
+    
+    #contactDetails ul li {
+        margin-bottom: 3px;
+        color: #444;
+    }
+    
+    #contactDetails ul li a, a[href^=tel] {
+        color: #444; 
+        text-decoration: none;
+        -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -ms-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+    }
+    
+    #contactDetails ul li a:hover { 
+        color: #cf8a05;
+    }
+    
+    
+    section {
+        border-top: 1px solid #dedede;
+        padding: 20px 0 0;
+    }
+    
+    section:first-child {
+        border-top: 0;
+    }
+    
+    section:last-child {
+        padding: 20px 0 10px;
+    }
+    
+    .sectionTitle {
+        float: left;
+        width: 25%;
+    }
+    
+    .sectionContent {
+        float: right;
+        width: 72.5%;
+    }
+    
+    .sectionTitle h1 {
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-size: 1.5em;
+        color: #cf8a05;
+    }
+    
+    .sectionContent h2 {
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+        font-size: 1.5em;
+        margin-bottom: -2px;
+    }
+    
+    .subDetails {
+        font-size: 0.8em;
+        font-style: italic;
+        margin-bottom: 3px;
+    }
+    
+    .keySkills {
+        list-style-type: none;
+        -moz-column-count:3;
+        -webkit-column-count:3;
+        column-count:3;
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: #444;
+    }
+    
+    .keySkills ul li {
+        margin-bottom: 3px;
+    }
+    
+    @media all and (min-width: 602px) and (max-width: 800px) {
+        #headshot {
+            display: none;
+        }
+        
+        .keySkills {
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        column-count:2;
+        }
+    }
+    
+    @media all and (max-width: 601px) {
+        #cv {
+            width: 95%;
+            margin: 10px auto;
+            min-width: 280px;
+        }
+        
+        #headshot {
+            display: none;
+        }
+        
+        #name, #contactDetails {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .sectionTitle, .sectionContent {
+            float: none;
+            width: 100%;
+        }
+        
+        .sectionTitle {
+            margin-left: -2px;
+            font-size: 1.25em;
+        }
+        
+        .keySkills {
+            -moz-column-count:2;
+            -webkit-column-count:2;
+            column-count:2;
+        }
+    }
+    
+    @media all and (max-width: 480px) {
+        .mainDetails {
+            padding: 15px 15px;
+        }
+        
+        section {
+            padding: 15px 0 0;
+        }
+        
+        #mainArea {
+            padding: 0 25px;
+        }
+    
+        
+        .keySkills {
+        -moz-column-count:1;
+        -webkit-column-count:1;
+        column-count:1;
+        }
+        
+        #name h1 {
+            line-height: .8em;
+            margin-bottom: 4px;
+        }
+    }
+    
+    @media print {
+        #cv {
+            width: 100%;
+        }
+    }
+    
+    @-webkit-keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @-moz-keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @-moz-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes reset {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .instaFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.5s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
+    }
+    
+    .quickFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 2.5s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 2.5s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in;
+    }
+     
+    .delayOne {
+        -webkit-animation-delay: 0, .5s;
+        -moz-animation-delay: 0, .5s;
+        animation-delay: 0, .5s;
+    }
+    
+    .delayTwo {
+        -webkit-animation-delay: 0, 1s;
+        -moz-animation-delay: 0, 1s;
+        animation-delay: 0, 1s;
+    }
+    
+    .delayThree {
+        -webkit-animation-delay: 0, 1.5s;
+        -moz-animation-delay: 0, 1.5s;
+        animation-delay: 0, 1.5s;
+    }
+    
+    .delayFour {
+        -webkit-animation-delay: 0, 2s;
+        -moz-animation-delay: 0, 2s;
+        animation-delay: 0, 2s;
+    }
+    
+    .delayFive {
+        -webkit-animation-delay: 0, 2.5s;
+        -moz-animation-delay: 0, 2.5s;
+        animation-delay: 0, 2.5s;
+	}
+	
+
+    .headings
+    {
+        font-size: xx-large;
+    }
+    .mini-headings
+    {
+        font-size: x-large;
+        font-style: oblique;
+        color:darkgoldenrod
+    }
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<body id="top">
+
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="data:image/png;base64,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"/>
+		</div>
+		
+		<div id="name">
+			<h1 class="quickFade delayTwo">Ansible</h1>
+			<!-- <h2 class="quickFade delayThree">DevOps</h2> -->
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+                <li>What is Ansible</li>
+                <li>Ansible Workflow</li>
+                <li>Ansible vs Chef</li>
+                <li>Ansible vs Puppet</li>
+				<li>
+                    Installation and Configration
+                </li>
+                <li>Inventories</li>
+                <li>Ad-hoc commands</li>
+                <li>Ansible Playbooks</li>
+                <li>Ansible Tower</li>
+                <li>Ansible Roles</li>
+                
+                    
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+
+
+
+
+
+	    <div id="mainArea" class="quickFade delayFive">
+		    <p>
+                <center>
+                <div class="headings">
+                    What is Ansible ?
+                </div>
+                </center>
+                Ansible is an open-source IT engine which automates the IT tools such as intra service orchestration, application deployment, cloud provisioning, etc.
+                <br><br>
+                Ansible is easy to deploy because it does not use any agents or custom security infrastructure on the client-side, and by pushing modules to the clients. These modules are executed locally on the client-side, and the output is pushed back to the Ansible server.
+                <br><br>
+                It can easily connect to clients using SSH-Keys, simplifying though the whole process. Client details, such as hostnames or IP addresses and SSH ports, are stored in the files, which are called inventory files. If you created an inventory file and populated it, then Ansible can use it.
+                <br><br>
+                <p class="mini-headings">
+                    Why Use Ansible ?
+                </p>
+                <li>Ansible is free to use by everyone.</li>
+                    <li>Ansible is very consistent and lightweight, and no constraints regarding the OS are present.</li>
+                    <li>
+                    It is very secure due to its agentless capabilities and open SSH security features.</li>
+                    <li>Ansible does not need any special system administrator skills to install and use it.</li>
+                    <li>Ansible has a comprehensive documentation and easy to learn structure and configuration.</li>
+            </p>
+            <hr>
+            
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible Workflow
+                </div>
+                </center>
+                Ansible works by connecting to your nodes and pushing out a small program called Ansible modules to them. Then Ansible executed these modules and removed them after finished. The library of modules can reside on any machine, and there are no daemons, servers, or databases required.
+                <br><br>
+                <center>
+                    <img src="assets/Ansible/a1.png" width="720px">
+                </center><br><br>
+                <p class="mini-headings">
+                    Terminologies
+                </p>
+                <div style="color: darkblue;">Control Node</div>
+                It can be called as main machine/server through which we run ansible commands on he machone we need to manage.
+                <br><br>
+                <div style="color: darkblue;">Managed Node</div>
+                These are machines we manage through Ansible on control node. These are by default managed using the SSH network protocol to ensure that machines are in required state.
+                <br><br>
+                <div style="color: darkblue;">ansible.cfg</div>
+                Manages the behaviour of an ansible installation.<br><br>
+                <div style="color: darkblue;">Hosts</div>
+                In the Ansible architecture, hosts are the node systems, which are automated by Ansible, and any machine such as RedHat, Linux, Windows, etc.<br><br>
+                <div style="color: darkblue;">Inventory</div>
+                Collection of IP/hostnames of all the managed nodes. These hosts can be combined as a group or individually depending on our requirements. 
+                <br><br>
+                <div style="color: darkblue;">Module</div>
+                The module is a command or set of similar commands which is executed on the client-side.<br><br>
+                <div style="color: darkblue;">Task</div>
+                A task is a section which consists of a single procedure to be completed.<br><br>
+                <div style="color: darkblue;">Role</div>
+                It is a way of organizing tasks and related files to be later called in a playbook.<br><br>
+                <div style="color: darkblue;">Fact</div>
+                The information fetched from the client system from the global variables with the gather facts operation.<br><br>
+                <div style="color: darkblue;">Play</div>
+                It is the execution of the playbook.<br><br>
+                <div style="color: darkblue;">Tag</div>
+                It is a name set to a task that can be used later on to issue just that specific task or group of jobs.
+
+            </p>
+            <hr>
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible vs Chef
+                    <br><br>
+                    <center>
+                        <img src="assets/Ansible/a2.png" width="720px">
+                    </center>
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible vs Puppet
+                </div>
+                </center>
+                <br><br><center>
+                    <img src="assets/Ansible/a3.png" width="720px">
+                </center>
+            </p>
+            <hr>
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Installation and configration
+                </div>
+                </center>
+            <br><div style="color: darkblue;">Install Ansible on Linux AMi Ec2 instance :</div>
+            <br>
+            <center>
+                <img src="assets/Ansible/a4.png">
+            </center>
+            <br>
+            <div style="color: darkblue;">Configrations to acheive passwordless login :</div>
+            </p>
+            <hr>
+
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Inventories
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ad-hoc commands
+                </div>
+                </center>
+                Ad-hoc commands are one of the simplest ways of using Ansible. These are used when you want to issue some commands on a server or bunch of servers. The ad-hoc commands are not stored for future use, but it represents a fast way to interact with the desired servers.
+                <br><br>
+                The Ansible ad-hoc command uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes. The Ad-hoc commands are quick and easy, but they are not re-usable. The Ad-hoc commands demonstrate the simplicity and power of Ansible.
+
+            </p>
+            <hr>
+
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Playbooks
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    ANsible Tower
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible Roles
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible Templates
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+            <p>
+                <center>
+                <div class="headings">
+                    Ansible Vault
+                </div>
+                </center>
+                
+            </p>
+            <hr>
+
+
+
+            <br>
+	    </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
